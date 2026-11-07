@@ -59,7 +59,3 @@ sourceSets.configureEach {
         }
     }
 }
-
-dependencies {
-    implementation "dev.boxadactle:Boxlib-neoforge:$boxlib_version"
-}

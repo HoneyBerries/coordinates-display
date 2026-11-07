@@ -26,10 +26,17 @@ side = "BOTH"
 
 [[dependencies.${mod_id}]]
 modId = "boxlib"
-type = "required"
-versionRange = "${boxlib_version_range}"
+type = "incompatible"
+versionRange = "*"
 ordering = "NONE"
 side = "BOTH"
+reason = "CoordinatesDisplay++ bundles BoxLib; remove the standalone BoxLib mod."
 
 [[mixins]]
    config = "coordinatesdisplay.mixins.json"
+
+[[mixins]]
+   config = "boxlib.mixins.json"
+
+[[mixins]]
+   config = "boxlib-common.mixins.json"

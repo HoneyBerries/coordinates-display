@@ -1,5 +1,7 @@
 package dev.boxadactle.coordinatesdisplay.neoforge;
 
+import dev.boxadactle.boxlib.core.BoxLib;
+import dev.boxadactle.boxlib.core.ModConstants;
 import dev.boxadactle.boxlib.util.WorldUtils;
 import dev.boxadactle.coordinatesdisplay.Bindings;
 import dev.boxadactle.coordinatesdisplay.CoordinatesDisplay;
@@ -13,6 +15,7 @@ import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.event.RenderGuiEvent;
@@ -25,6 +28,10 @@ public class CoordinatesDisplayNeoforge {
     public static boolean deltaError = false;
 
     public CoordinatesDisplayNeoforge() {
+        ModConstants.IS_DEVELOPMENT = !FMLLoader.getCurrent().isProduction();
+
+        BoxLib.init();
+
         ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () ->
                 (minecraft, screen) -> new ConfigScreen(screen)
         );

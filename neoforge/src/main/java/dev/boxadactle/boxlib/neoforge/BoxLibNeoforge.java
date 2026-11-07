@@ -1,0 +1,53 @@
+package dev.boxadactle.boxlib.neoforge;
+
+import com.mojang.brigadier.CommandDispatcher;
+import dev.boxadactle.boxlib.command.BCommandImpl;
+import dev.boxadactle.boxlib.command.BCommandSourceStack;
+import dev.boxadactle.boxlib.core.ModConstants;
+import dev.boxadactle.boxlib.scheduling.Scheduling;
+import dev.boxadactle.boxlib.test.TestMod;
+import dev.boxadactle.boxlib.util.MouseUtils;
+import dev.boxadactle.coordinatesdisplay.CoordinatesDisplay;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.event.RegisterClientCommandsEvent;
+import net.neoforged.neoforge.client.event.ScreenEvent;
+
+public class BoxLibNeoforge {
+
+    @EventBusSubscriber(modid = CoordinatesDisplay.MOD_ID, value = Dist.CLIENT)
+    public static class ClientNeoforgeEvents {
+
+        @SuppressWarnings("unchecked")
+        @SubscribeEvent
+        public static void registerCommands(RegisterClientCommandsEvent event) {
+            BCommandImpl.register((CommandDispatcher<BCommandSourceStack>) (CommandDispatcher<?>) event.getDispatcher());
+        }
+
+        @SubscribeEvent
+        public static void mouseDown(ScreenEvent.MouseButtonPressed.Pre e) {
+            MouseUtils.setMouseDown(e.getButton());
+        }
+
+        @SubscribeEvent
+        public static void mouseUp(ScreenEvent.MouseButtonReleased.Pre ignored) {
+            MouseUtils.setMouseUp();
+        }
+
+        @SubscribeEvent
+        public static void tick(ClientTickEvent.Post ignored) {
+            Scheduling.tick();
+        }
+
+        @SubscribeEvent
+        public static void load(FMLClientSetupEvent e) {
+            if (ModConstants.IS_DEVELOPMENT) {
+                TestMod.init();
+            }
+        }
+    }
+
+}
