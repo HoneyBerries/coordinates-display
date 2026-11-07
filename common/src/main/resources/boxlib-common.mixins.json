@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "dev.boxadactle.boxlib.mixin",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "DebugRendererMixin",
+    "KeybindAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
