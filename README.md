@@ -9,20 +9,16 @@ Coordinates Display enhances the client-side experience by incorporating a heads
 
 ## Installation/Dependencies
 
-#### This mod requires [BoxLib](https://modrinth.com/mod/boxlib) a Client-side library mod developed by me.
+#### BoxLib, the client-side library mod this mod used to require, is now bundled. If you have the standalone BoxLib mod installed, remove it.
 
 1.  **Install Minecraft Forge/Fabric/Neoforge:** Download and install the appropriate modloader for your Minecraft version.
 2.  **Download the mod:** Download the latest release of Coordinates Display for your specific modloader and Minecraft version
-3. **Download BoxLib:** Download the latest release of [BoxLib](https://modrinth.com/mod/boxlib) for your specific modloader and Minecaft version
-4.  **Place the mod jars:** Drop the downloaded jar files into your Minecraft mods folder. The location of this folder varies depending on your operating system.
+3.  **Place the mod jar:** Drop the downloaded jar file into your Minecraft mods folder. The location of this folder varies depending on your operating system.
 
 ### Fabric Dependencies
 [![Requires Fabric API](https://i.imgur.com/Ol1Tcf8.png)](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
 
 [Mod Menu](https://modrinth.com/mod/modmenu) is recommended for configuration purposes.
-
-### Forge/NeoForge Dependencies
-This mod requires [BoxLib](https://modrinth.com/mod/boxlib) a Client-side library mod developed by me.
 
 ## Key Features
 
