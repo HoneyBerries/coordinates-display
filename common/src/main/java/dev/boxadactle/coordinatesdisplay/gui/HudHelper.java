@@ -14,7 +14,8 @@ public interface HudHelper {
 
     default Position generatePositionData() {
         net.minecraft.world.phys.Vec3 pos = new net.minecraft.world.phys.Vec3(Math.random() * 1000, Math.random() * 5, Math.random() * 1000);
-        BlockPos b = BlockPos.containing(pos);
+        net.minecraft.core.Vec3i v = ModUtil.doubleVecToIntVec(pos);
+        BlockPos b = new BlockPos(v.getX(), v.getY(), v.getZ());
         ChunkPos chunkPos = ChunkPos.containing(b);
         float cameraYaw = (float) Math.random() * 180;
         float cameraPitch  = (float) Math.random() * 180;
