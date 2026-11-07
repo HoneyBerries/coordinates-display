@@ -9,7 +9,7 @@ Coordinates Display enhances the client-side experience by incorporating a heads
 
 ## Installation/Dependencies
 
-#### BoxLib, the client-side library mod this mod used to require, is now bundled. If you have the standalone BoxLib mod installed, remove it.
+#### BoxLib, the client-side library mod this mod used to require, is now bundled. This makes the mod incompatible with the standalone BoxLib mod and with other mods that require it (e.g. BoxHUD); remove them if installed. The BoxHUD integration will not activate while that is the case.
 
 1.  **Install Minecraft Forge/Fabric/Neoforge:** Download and install the appropriate modloader for your Minecraft version.
 2.  **Download the mod:** Download the latest release of Coordinates Display for your specific modloader and Minecraft version

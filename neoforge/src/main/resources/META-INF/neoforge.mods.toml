@@ -30,7 +30,7 @@ type = "incompatible"
 versionRange = "*"
 ordering = "NONE"
 side = "BOTH"
-reason = "CoordinatesDisplay++ bundles BoxLib; remove the standalone BoxLib mod."
+reason = "CoordinatesDisplay bundles BoxLib; remove the standalone BoxLib mod."
 
 [[mixins]]
    config = "coordinatesdisplay.mixins.json"

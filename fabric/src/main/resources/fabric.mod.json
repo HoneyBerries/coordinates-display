@@ -30,6 +30,7 @@
   ],
   "depends": {
     "fabricloader": "*",
+    "fabric-api": "*",
     "minecraft": "${minecraft_version_range_fabric}"
   },
   "breaks": {
