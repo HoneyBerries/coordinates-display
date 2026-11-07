@@ -21,7 +21,7 @@ public class WorldColors {
             if (biomeName.contains("ocean") || biomeName.contains("river") || biomeName.contains("swamp"))
                 return biome.getWaterColor();
             if (biomeName.contains("nether"))
-                return new Color(Objects.requireNonNull(biome.getAttributes().get(EnvironmentAttributes.FOG_COLOR)).applyModifier(1)).brighter().brighter().getRGB();
+                return new Color(net.minecraft.util.ARGB.colorFromVector3f(Objects.requireNonNull(biome.getAttributes().get(EnvironmentAttributes.FOG_COLOR)).applyModifier(net.minecraft.util.ARGB.vector3fFromRGB24(0xFFFFFF)))).brighter().brighter().getRGB();
             if (biomeName.contains("icy")) return 0x84ecf0;
             if (biomeName.contains("beach")) return 0xfade55;
             else return biome.getFoliageColor();
