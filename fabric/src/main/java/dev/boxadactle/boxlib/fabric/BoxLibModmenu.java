@@ -1,0 +1,14 @@
+package dev.boxadactle.boxlib.fabric;
+
+import com.terraformersmc.modmenu.api.ConfigScreenFactory;
+import com.terraformersmc.modmenu.api.ModMenuApi;
+import dev.boxadactle.boxlib.core.ModConstants;
+import dev.boxadactle.boxlib.test.config.ExampleConfigScreen;
+
+public class BoxLibModmenu implements ModMenuApi {
+
+    @Override
+    public ConfigScreenFactory<?> getModConfigScreenFactory() {
+        return ModConstants.IS_DEVELOPMENT ? ExampleConfigScreen::new : (_) -> null;
+    }
+}

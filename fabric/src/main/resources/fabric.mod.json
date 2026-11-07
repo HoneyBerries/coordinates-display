@@ -16,16 +16,23 @@
     "main": [
       "dev.boxadactle.coordinatesdisplay.fabric.CoordinatesDisplayFabric"
     ],
+    "client": [
+      "dev.boxadactle.boxlib.fabric.BoxLibFabric"
+    ],
     "modmenu": [
       "dev.boxadactle.coordinatesdisplay.fabric.ModMenuIntegration"
     ]
   },
   "mixins": [
-    "coordinatesdisplay.mixins.json"
+    "coordinatesdisplay.mixins.json",
+    "boxlib.mixins.json",
+    "boxlib-common.mixins.json"
   ],
   "depends": {
     "fabricloader": "*",
-    "minecraft": "${minecraft_version_range_fabric}",
-    "boxlib": "${boxlib_version_range_fabric}"
+    "minecraft": "${minecraft_version_range_fabric}"
+  },
+  "breaks": {
+    "boxlib": "*"
   }
 }
