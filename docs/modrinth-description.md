@@ -5,7 +5,7 @@ An actively updated fork of Coordinates Display that shows your coordinates, dir
 PROJECT TITLE: Coordinates Display++
 -->
 
-[![Modrinth](https://raw.githubusercontent.com/Boxadactle/coordinates-display/3a9f7f5a3592c7888b387160595f89f74f756da2/img/modrinth.svg)](https://modrinth.com/mod/coordinates-display-plus-plus) [![Wiki](https://raw.githubusercontent.com/Boxadactle/coordinates-display/3a9f7f5a3592c7888b387160595f89f74f756da2/img/wiki.svg)](https://boxadactle.dev/wiki/coordinates-display/) [![GitHub](https://raw.githubusercontent.com/Boxadactle/coordinates-display/c47768fbc605863978b6c88ca3c4fcac4a5885da/img/github.svg)](https://github.com/HoneyBerries/coordinates-display)
+[![CurseForge](https://cf.way2muchnoise.eu/full_coordinates-display-and-info_downloads.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/coordinates-display-and-info) [![Modrinth](https://raw.githubusercontent.com/Boxadactle/coordinates-display/3a9f7f5a3592c7888b387160595f89f74f756da2/img/modrinth.svg)](https://modrinth.com/mod/coordinates-display-plus-plus) [![Wiki](https://raw.githubusercontent.com/Boxadactle/coordinates-display/3a9f7f5a3592c7888b387160595f89f74f756da2/img/wiki.svg)](https://boxadactle.dev/wiki/coordinates-display/) [![GitHub](https://raw.githubusercontent.com/Boxadactle/coordinates-display/c47768fbc605863978b6c88ca3c4fcac4a5885da/img/github.svg)](https://github.com/HoneyBerries/coordinates-display)
 
 # Coordinates Display++
 
@@ -28,7 +28,7 @@ What's different from the original:
 - **Updated to Minecraft 26.3.** I'll keep porting to new versions as they release.
 - **BoxLib is bundled.** You no longer need to install the separate BoxLib library mod.
 - **Fixes and new features**, like the day counter and time display, plus fixes to the time renderer and padding.
-- **Fabric and NeoForge builds** published for every release.
+- **Fabric (also works on Quilt) and NeoForge builds** published for every release.
 
 > **Important:** Because BoxLib is built in, this fork is **not compatible with the standalone BoxLib mod** or mods that require it (for example BoxHUD). Remove them before installing. The BoxHUD integration will not activate while they are present.
 
